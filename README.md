@@ -119,7 +119,7 @@ ng serve
 {
   "title": "New Ticket",
   "description": "Identity Verification",
-  "status": "open"
+  "status": "NEW"
 }
 
 // Response
@@ -127,7 +127,7 @@ ng serve
   "id": 1,
   "title": "New Ticket",
   "description": "Identity Verification",
-  "status": "open",
+  "status": "NEW",
   "created_at": "2024-10-28T12:26:37.399881Z",
   "updated_at": "2024-10-28T12:26:37.399881Z"
 }
