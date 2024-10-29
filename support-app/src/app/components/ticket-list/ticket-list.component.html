@@ -1,0 +1,30 @@
+<div class="ticket-list">
+  <h2 class="text-2xl font-bold mb-4">Tickets</h2>
+  
+  <div class="tickets" *ngIf="tickets.length > 0; else noTickets">
+    <div *ngFor="let ticket of tickets" class="ticket">
+      <h3 class="text-xl font-semibold">{{ ticket.title }}</h3>
+      <p><strong>Description:</strong> {{ ticket.description }}</p>
+      <p><strong>Status:</strong> {{ ticket.status }}</p>
+      <p><strong>Created:</strong> {{ ticket.created_at | date:'medium' || 'N/A' }}</p>
+      <p><strong>Updated:</strong> {{ ticket.updated_at | date:'medium' || 'N/A' }}</p>
+      <div class="mt-4 space-x-2">
+        <button 
+          (click)="onResolveTicket(ticket.id!)" 
+          [disabled]="ticket.status === 'RESOLVED'"
+          class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 disabled:bg-gray-300">
+          Resolve
+        </button>
+        <button 
+          (click)="onDeleteTicket(ticket.id!)"
+          class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noTickets>
+    <p class="text-gray-500 text-center py-8">No tickets found.</p>
+  </ng-template>
+</div>

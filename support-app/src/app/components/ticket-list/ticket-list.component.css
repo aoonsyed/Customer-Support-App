@@ -1,0 +1,44 @@
+.ticket-list {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .ticket {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .ticket h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .ticket p {
+    margin: 8px 0;
+  }
+  
+  button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  button:not(:disabled) {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button:not(:disabled):hover {
+    background-color: #0056b3;
+  }

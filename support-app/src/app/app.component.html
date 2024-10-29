@@ -1,0 +1,22 @@
+<!-- src/app/app.component.html -->
+<nav class="bg-indigo-600 p-4">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="text-white font-bold text-xl">Ticket System</div>
+    <div class="space-x-4">
+      <a routerLink="/tickets" 
+         routerLinkActive="bg-indigo-700"
+         class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">
+        View Tickets
+      </a>
+      <a routerLink="/create-ticket" 
+         routerLinkActive="bg-indigo-700"
+         class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">
+        Create Ticket
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="container mx-auto px-4">
+  <router-outlet></router-outlet>
+</main>
